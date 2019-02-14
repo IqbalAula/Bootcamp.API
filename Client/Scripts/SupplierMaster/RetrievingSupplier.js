@@ -1,15 +1,16 @@
 ﻿$(document).ready(function () {
     LoadIndexSupplier();
+    ClearScreen();
     $('#table').DataTable({
         "ajax": LoadIndexSupplier()
-    })
-    ClearScreen();
+    })    
 })
 
 function LoadIndexSupplier() {
     $.ajax({
         type: "GET",
         url: "http://localhost:1262/api/Suppliers",
+        async: false,
         dataType: "JSON",
         success: function (data) {
             var html = '';
@@ -29,21 +30,87 @@ function LoadIndexSupplier() {
 }
 
 function Save() {
-
+    var supplier = new Object();
+    supplier.name = $('#Name').val();
+    $.ajax({
+        url: "http://localhost:1262/api/Suppliers",
+        type: 'POST',
+        dataType: 'json',
+        data: supplier,
+        success: function (result) {
+            LoadIndexSupplier();
+            $('#myModal').modal('hide');
+        }
+    });
 }
 
 function Edit() {
-
+    var supplier = new Object();
+    supplier.id = $('#Id').val();
+    supplier.name = $('#Name').val();
+    $.ajax({
+        url: "http://localhost:1262/api/Suppliers/" + $('#Id').val(),
+        data: supplier,
+        type: "PUT",
+        dataType: "json",
+        success: function (result) {
+            LoadIndexSupplier();
+            ClearScreen();
+            $('#myModal').modal('hide');
+            $('#Name').val('');
+        }
+    });
 }
 
-function GetById() {
+function GetById(Id) {
+    $.ajax({
+        url: "http://localhost:1262/api/Suppliers/" + Id,
+        type: "GET",
+        dataType: "json",
+        success: function (result) {
+            $('#Id').val(result.Id);
+            $('#Name').val(result.Name);
 
+            $('#myModal').modal('show');
+            $('#Update').show();
+            $('#Save').hide();
+        }
+    })
 }
 
-function Delete() {
-
+function Delete(Id) {
+    swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this imaginary file!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false
+    }, function () {
+        $.ajax({
+            url: "http://localhost:1262/api/Suppliers/" + Id,
+            type: "DELETE",
+            success: function (response) {
+                swal({
+                    title: "Deleted!",
+                    text: "That data has been soft delete!",
+                    type: "success"
+                },
+                function () {
+                    window.location.href = '/Suppliers/Index/';
+                });
+            },
+            error: function (response) {
+                swal("Oops", "We couldn't connect to the server!", "error");
+            }
+        });
+    });
 }
 
 function ClearScreen() {
-
+    $('#Update').hide();
+    $('#Save').show();
+    $('#Id').val('');
+    $('#Name').val('');
 }
