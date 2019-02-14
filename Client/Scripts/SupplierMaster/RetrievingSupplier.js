@@ -19,8 +19,8 @@ function LoadIndexSupplier() {
                 html += '<tr>';
                 html += '<td>' + i + '</td>';
                 html += '<td>' + val.Name + '</td>';
-                html += '<td> <a href="#" onclick="return GetById('+ val.Id +')">Edit</a>';
-                html += ' | <a href="#" onclick="return Delete('+ val.Id +')">Delete</a> </td>';
+                html += '<td> <a href="#" class="fa fa-pencil" onclick="return GetById(' + val.Id + ')">Edit</a>';
+                html += ' | <a href="#" class="fa fa-trash" onclick="return Delete(' + val.Id + ')">Delete</a> </td>';
                 html += '</tr>';
                 i++;                
             });

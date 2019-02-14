@@ -21,9 +21,11 @@ namespace API
 
             //This is service area
             container.RegisterType<ISupplierService, SupplierService>();
+            container.RegisterType<IItemService, ItemService>();
 
             //This is repository area
             container.RegisterType<ISupplierRepository, SupplierRepository>();
+            container.RegisterType<IItemRepository, ItemRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

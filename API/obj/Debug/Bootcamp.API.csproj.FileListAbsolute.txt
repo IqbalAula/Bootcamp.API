@@ -17,6 +17,8 @@ D:\Bootcamp22\Bootcamp.API\API\bin\Antlr3.Runtime.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\BussinessLogic.exe
 D:\Bootcamp22\Bootcamp.API\API\bin\Common.exe
 D:\Bootcamp22\Bootcamp.API\API\bin\CommonServiceLocator.dll
+D:\Bootcamp22\Bootcamp.API\API\bin\Core.exe
+D:\Bootcamp22\Bootcamp.API\API\bin\DataAccess.exe
 D:\Bootcamp22\Bootcamp.API\API\bin\EntityFramework.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\EntityFramework.SqlServer.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\Microsoft.AspNet.Identity.Core.dll
@@ -57,10 +59,10 @@ D:\Bootcamp22\Bootcamp.API\API\bin\Unity.RegistrationByConvention.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\Unity.ServiceLocation.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\Unity.WebApi.dll
 D:\Bootcamp22\Bootcamp.API\API\bin\WebGrease.dll
-D:\Bootcamp22\Bootcamp.API\API\bin\DataAccess.exe
-D:\Bootcamp22\Bootcamp.API\API\bin\Core.exe
 D:\Bootcamp22\Bootcamp.API\API\bin\BussinessLogic.pdb
 D:\Bootcamp22\Bootcamp.API\API\bin\Common.pdb
+D:\Bootcamp22\Bootcamp.API\API\bin\Core.pdb
+D:\Bootcamp22\Bootcamp.API\API\bin\DataAccess.pdb
 D:\Bootcamp22\Bootcamp.API\API\bin\CommonServiceLocator.pdb
 D:\Bootcamp22\Bootcamp.API\API\bin\EntityFramework.xml
 D:\Bootcamp22\Bootcamp.API\API\bin\EntityFramework.SqlServer.xml
@@ -98,8 +100,6 @@ D:\Bootcamp22\Bootcamp.API\API\bin\Microsoft.Owin.Security.Google.xml
 D:\Bootcamp22\Bootcamp.API\API\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Bootcamp22\Bootcamp.API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Bootcamp22\Bootcamp.API\API\bin\System.Web.Http.Owin.xml
-D:\Bootcamp22\Bootcamp.API\API\bin\DataAccess.pdb
-D:\Bootcamp22\Bootcamp.API\API\bin\Core.pdb
 D:\Bootcamp22\Bootcamp.API\API\obj\Debug\Bootcamp.API.csprojResolveAssemblyReference.cache
 D:\Bootcamp22\Bootcamp.API\API\obj\Debug\API.dll
 D:\Bootcamp22\Bootcamp.API\API\obj\Debug\API.pdb
